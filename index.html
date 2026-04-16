@@ -1,0 +1,1580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LINKASIA WORLD — Proprietary Capital, Long-Term Vision</title>
+    <meta name="description" content="LINKASIA WORLD is a proprietary capital firm investing in early-stage founders across Asia and the US, self-funded through internal systematic strategies.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #0E1116;
+            --navy-light: #171B22;
+            --navy-mid: #1E2530;
+            --gold: #C9A96E;
+            --gold-light: #E4CFA2;
+            --warm-gray: #F3EEE4;
+            --warm-gray-dark: #E5DDD0;
+            --white: #ffffff;
+            --text-dark: #1a1a2e;
+            --text-body: #4a4a5a;
+            --text-muted: #8B92A3;
+            --text-light: rgba(255,255,255,0.7);
+            --border: #e2e0db;
+            --font-serif: 'DM Serif Display', Georgia, 'Times New Roman', serif;
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--white);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ══════════════════════════════════════
+           NAVIGATION
+           ══════════════════════════════════════ */
+        .top-bar {
+            background: var(--navy);
+            color: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .top-bar-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 72px;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.1;
+        }
+
+        .logo-main {
+            font-family: var(--font-serif);
+            font-size: 22px;
+            color: var(--white);
+            letter-spacing: 0.5px;
+        }
+
+        .logo-sub {
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-top: 2px;
+        }
+
+        .nav-center {
+            display: flex;
+            gap: 36px;
+            list-style: none;
+        }
+
+        .nav-center a {
+            color: rgba(255,255,255,0.65);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.2px;
+            padding: 8px 0;
+            transition: color 0.2s;
+            position: relative;
+        }
+
+        .nav-center a:hover { color: var(--white); }
+
+        .nav-center a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: width 0.3s;
+        }
+
+        .nav-center a:hover::after { width: 100%; }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .lang-switch {
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            padding: 6px 12px;
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 3px;
+            transition: all 0.2s;
+        }
+
+        .lang-switch:hover {
+            color: var(--white);
+            border-color: rgba(255,255,255,0.4);
+        }
+
+        .btn-contact-nav {
+            background: transparent;
+            color: var(--gold);
+            border: 1px solid var(--gold);
+            padding: 10px 24px;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s;
+            letter-spacing: 0.3px;
+        }
+
+        .btn-contact-nav:hover {
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .mobile-toggle span {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: var(--white);
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+
+        /* ══════════════════════════════════
+           BREADCRUMB
+           ══════════════════════════════════ */
+        .breadcrumb {
+            background: var(--navy-light);
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .breadcrumb-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 40px;
+            font-size: 12px;
+            color: rgba(255,255,255,0.4);
+        }
+
+        .breadcrumb-inner a {
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+        }
+
+        .breadcrumb-inner a:hover { color: var(--gold); }
+        .breadcrumb-inner span { color: rgba(255,255,255,0.3); margin: 0 8px; }
+
+        /* ══════════════════════════════
+           HERO
+           ══════════════════════════════ */
+        .hero {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+            color: var(--white);
+            padding: 100px 0 110px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 70%;
+            height: 200%;
+            background: radial-gradient(ellipse, rgba(201,169,110,0.06) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-family: var(--font-serif);
+            font-size: 52px;
+            font-weight: 400;
+            line-height: 1.15;
+            margin-bottom: 28px;
+            letter-spacing: -0.3px;
+        }
+
+        .hero h1 em {
+            font-style: normal;
+            color: var(--gold);
+        }
+
+        .hero-desc {
+            font-size: 17px;
+            line-height: 1.75;
+            color: var(--text-light);
+            margin-bottom: 40px;
+            max-width: 480px;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--gold);
+            color: var(--navy);
+            padding: 14px 32px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+            letter-spacing: 0.2px;
+        }
+
+        .btn-primary:hover { background: var(--gold-light); }
+
+        .btn-primary svg {
+            width: 16px;
+            height: 16px;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+        }
+
+        .stat-box {
+            padding: 28px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            position: relative;
+        }
+
+        .stat-box:nth-child(odd) {
+            padding-right: 32px;
+        }
+
+        .stat-box:nth-child(even) {
+            padding-left: 32px;
+            border-left: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .stat-box:nth-last-child(-n+2) {
+            border-bottom: none;
+        }
+
+        .stat-label {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 12px;
+        }
+
+        .stat-value {
+            font-family: var(--font-serif);
+            font-size: 32px;
+            color: var(--white);
+            margin-bottom: 6px;
+            line-height: 1.2;
+        }
+
+        .stat-desc {
+            font-size: 12px;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* ══════════════════════════════════════════
+           SECTION CONTAINER
+           ══════════════════════════════════════════ */
+        .section-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* ══════════════════════════════════
+           EXECUTIVE SUMMARY
+           ══════════════════════════════════ */
+        .exec-summary {
+            background: var(--warm-gray);
+            padding: 100px 0;
+        }
+
+        .exec-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 72px;
+            align-items: start;
+        }
+
+        .section-eyebrow {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 16px;
+        }
+
+        .section-heading {
+            font-family: var(--font-serif);
+            font-size: 40px;
+            font-weight: 400;
+            color: var(--text-dark);
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+
+        .section-intro {
+            font-size: 17px;
+            color: var(--text-body);
+            line-height: 1.7;
+            max-width: 640px;
+        }
+
+        .exec-text p {
+            font-size: 16px;
+            color: var(--text-body);
+            line-height: 1.85;
+            margin-bottom: 20px;
+        }
+
+        .exec-quote {
+            margin-top: 32px;
+            padding: 28px 32px;
+            background: var(--white);
+            border-left: 4px solid var(--gold);
+            border-radius: 0 8px 8px 0;
+        }
+
+        .exec-quote p {
+            font-size: 17px;
+            color: var(--text-dark);
+            line-height: 1.6;
+            margin-bottom: 0;
+            font-style: italic;
+        }
+
+        .exec-diagram {
+            background: var(--navy);
+            border-radius: 12px;
+            padding: 44px 36px;
+            color: var(--white);
+        }
+
+        .exec-diagram-title {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 28px;
+        }
+
+        .exec-flow {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .exec-flow-item {
+            display: flex;
+            align-items: center;
+            gap: 0;
+            padding: 16px 20px;
+            background: rgba(255,255,255,0.04);
+            border-radius: 6px;
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .exec-flow-num {
+            font-family: var(--font-serif);
+            font-size: 20px;
+            color: var(--gold);
+            min-width: 32px;
+        }
+
+        .exec-flow-label {
+            font-size: 14px;
+            color: rgba(255,255,255,0.85);
+            font-weight: 500;
+        }
+
+        /* ══════════════════════════════════
+           MARKET OPPORTUNITY
+           ══════════════════════════════════ */
+        .opportunity {
+            background: var(--white);
+            padding: 100px 0;
+        }
+
+        .opportunity-header { margin-bottom: 64px; }
+
+        .opp-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .opp-card {
+            background: var(--warm-gray);
+            border-radius: 12px;
+            padding: 40px 32px;
+            border: 1px solid var(--border);
+            transition: transform 0.2s;
+        }
+
+        .opp-card:hover { transform: translateY(-4px); }
+
+        .opp-num {
+            font-family: var(--font-serif);
+            font-size: 32px;
+            color: var(--gold);
+            margin-bottom: 16px;
+        }
+
+        .opp-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+        }
+
+        .opp-card p {
+            font-size: 15px;
+            color: var(--text-body);
+            line-height: 1.7;
+        }
+
+        /* ══════════════════════════════════
+           THESIS
+           ══════════════════════════════════ */
+        .thesis {
+            background: var(--navy);
+            color: var(--white);
+            padding: 100px 0;
+        }
+
+        .thesis-header { margin-bottom: 64px; }
+
+        .thesis-header .section-heading {
+            color: var(--white);
+        }
+
+        .thesis-header .section-intro {
+            color: var(--text-muted);
+        }
+
+        .thesis-big-quote {
+            font-family: var(--font-serif);
+            font-size: 22px;
+            color: var(--gold-light);
+            line-height: 1.6;
+            max-width: 800px;
+            margin-bottom: 64px;
+            font-style: italic;
+        }
+
+        .thesis-principles {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .thesis-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.07);
+            border-radius: 10px;
+            padding: 36px 28px;
+        }
+
+        .thesis-card h3 {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 14px;
+        }
+
+        .thesis-card p {
+            font-size: 15px;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        /* ══════════════════════════════════
+           FIRM ARCHITECTURE (3 PILLARS)
+           ══════════════════════════════════ */
+        .architecture {
+            background: var(--warm-gray);
+            padding: 100px 0;
+        }
+
+        .architecture-header { margin-bottom: 64px; }
+
+        .pillar-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .pillar-card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(14,17,22,0.08);
+        }
+
+        .pillar-card-header {
+            background: var(--navy);
+            padding: 28px 28px 24px;
+        }
+
+        .pillar-tag {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 8px;
+        }
+
+        .pillar-card-header h3 {
+            font-family: var(--font-serif);
+            font-size: 22px;
+            color: var(--white);
+            font-weight: 400;
+        }
+
+        .pillar-card-header .pillar-role {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        .pillar-card-body {
+            padding: 28px;
+        }
+
+        .pillar-card-body p {
+            font-size: 15px;
+            color: var(--text-body);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .pillar-list {
+            list-style: none;
+        }
+
+        .pillar-list li {
+            font-size: 14px;
+            color: var(--text-body);
+            padding: 8px 0;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .pillar-list li:last-child { border-bottom: none; }
+
+        .pillar-list li::before {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background: var(--gold);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        /* ══════════════════════════════════
+           INVESTMENT STRATEGY
+           ══════════════════════════════════ */
+        .strategy {
+            background: var(--white);
+            padding: 100px 0;
+        }
+
+        .strategy-header { margin-bottom: 64px; }
+
+        .strategy-grid {
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            gap: 64px;
+            align-items: start;
+        }
+
+        .strategy-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            margin-bottom: 40px;
+        }
+
+        .strategy-table thead th {
+            background: var(--navy);
+            color: var(--gold);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 14px 16px;
+            text-align: left;
+        }
+
+        .strategy-table thead th:first-child { border-radius: 8px 0 0 0; }
+        .strategy-table thead th:last-child { border-radius: 0 8px 0 0; }
+
+        .strategy-table tbody td {
+            padding: 14px 16px;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-body);
+        }
+
+        .strategy-table tbody tr:last-child td { border-bottom: none; }
+
+        .strategy-table tbody td:first-child {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .strategy-process h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+
+        .strategy-steps {
+            list-style: none;
+            counter-reset: step;
+        }
+
+        .strategy-steps li {
+            counter-increment: step;
+            position: relative;
+            padding: 12px 0 12px 40px;
+            font-size: 14px;
+            color: var(--text-body);
+            line-height: 1.6;
+        }
+
+        .strategy-steps li::before {
+            content: counter(step);
+            position: absolute;
+            left: 0;
+            top: 12px;
+            width: 26px;
+            height: 26px;
+            background: var(--gold);
+            color: var(--navy);
+            border-radius: 50%;
+            font-size: 12px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* FOCUS SECTORS */
+        .sectors {
+            margin-top: 80px;
+        }
+
+        .sectors h3 {
+            font-family: var(--font-serif);
+            font-size: 28px;
+            font-weight: 400;
+            color: var(--text-dark);
+            margin-bottom: 40px;
+        }
+
+        .sector-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .sector-card {
+            background: var(--warm-gray);
+            border-radius: 10px;
+            padding: 32px 24px;
+            border: 1px solid var(--border);
+        }
+
+        .sector-num {
+            font-family: var(--font-serif);
+            font-size: 24px;
+            color: var(--gold);
+            margin-bottom: 12px;
+        }
+
+        .sector-card h4 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+
+        .sector-card p {
+            font-size: 13px;
+            color: var(--text-body);
+            line-height: 1.6;
+        }
+
+        /* ══════════════════════════════════
+           GEOGRAPHIC STRATEGY
+           ══════════════════════════════════ */
+        .geography {
+            background: var(--navy);
+            color: var(--white);
+            padding: 100px 0;
+        }
+
+        .geography-header { margin-bottom: 64px; }
+
+        .geography-header .section-heading { color: var(--white); }
+        .geography-header .section-intro { color: var(--text-muted); }
+
+        .geo-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .geo-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.07);
+            border-radius: 12px;
+            padding: 44px 36px;
+        }
+
+        .geo-pct {
+            font-family: var(--font-serif);
+            font-size: 56px;
+            color: var(--gold);
+            margin-bottom: 8px;
+        }
+
+        .geo-label {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold-light);
+            margin-bottom: 20px;
+        }
+
+        .geo-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 12px;
+        }
+
+        .geo-card p {
+            font-size: 15px;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        /* ══════════════════════════════════
+           FOUNDER
+           ══════════════════════════════════ */
+        .founder {
+            background: var(--warm-gray);
+            padding: 100px 0;
+        }
+
+        .founder-header { margin-bottom: 64px; }
+
+        .founder-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 64px;
+            align-items: start;
+        }
+
+        .founder-avatar {
+            background: var(--navy);
+            border-radius: 12px;
+            padding: 48px 32px;
+            text-align: center;
+        }
+
+        .avatar-initials {
+            width: 96px;
+            height: 96px;
+            border: 2px solid var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-serif);
+            font-size: 32px;
+            color: var(--gold);
+            margin: 0 auto 24px;
+        }
+
+        .founder-avatar h3 {
+            font-family: var(--font-serif);
+            font-size: 24px;
+            color: var(--white);
+            margin-bottom: 4px;
+        }
+
+        .founder-avatar .founder-name-en {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+        }
+
+        .founder-avatar .founder-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--gold);
+            letter-spacing: 0.5px;
+        }
+
+        .founder-cities {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 20px;
+            letter-spacing: 0.5px;
+        }
+
+        .founder-content h3 {
+            font-family: var(--font-serif);
+            font-size: 28px;
+            font-weight: 400;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+
+        .founder-bio {
+            font-size: 16px;
+            color: var(--text-body);
+            line-height: 1.8;
+            margin-bottom: 32px;
+        }
+
+        .career-list {
+            list-style: none;
+        }
+
+        .career-list li {
+            display: flex;
+            gap: 16px;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 14px;
+            align-items: baseline;
+        }
+
+        .career-list li:last-child { border-bottom: none; }
+
+        .career-year {
+            color: var(--gold);
+            font-weight: 700;
+            min-width: 110px;
+            font-size: 13px;
+        }
+
+        .career-detail {
+            color: var(--text-body);
+            line-height: 1.6;
+        }
+
+        /* ══════════════════════════════════
+           ROADMAP
+           ══════════════════════════════════ */
+        .roadmap {
+            background: var(--white);
+            padding: 100px 0;
+        }
+
+        .roadmap-header { margin-bottom: 64px; }
+
+        .roadmap-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .roadmap-card {
+            background: var(--warm-gray);
+            border-radius: 12px;
+            padding: 36px 28px;
+            border: 1px solid var(--border);
+        }
+
+        .roadmap-year {
+            font-family: var(--font-serif);
+            font-size: 36px;
+            color: var(--gold);
+            margin-bottom: 4px;
+        }
+
+        .roadmap-phase {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+        }
+
+        .roadmap-items {
+            list-style: none;
+        }
+
+        .roadmap-items li {
+            font-size: 14px;
+            color: var(--text-body);
+            padding: 8px 0;
+            padding-left: 18px;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .roadmap-items li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 15px;
+            width: 6px;
+            height: 6px;
+            background: var(--gold);
+            border-radius: 50%;
+        }
+
+        /* ══════════════════════════════════
+           DISCLAIMER
+           ══════════════════════════════════ */
+        .disclaimer {
+            background: var(--navy-light);
+            padding: 44px 0;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .disclaimer p {
+            font-size: 12px;
+            color: var(--text-muted);
+            line-height: 1.8;
+            max-width: 920px;
+        }
+
+        /* ══════════════════════════════════
+           CONTACT
+           ══════════════════════════════════ */
+        .contact {
+            background: var(--navy);
+            color: var(--white);
+            padding: 100px 0;
+        }
+
+        .contact-header { margin-bottom: 64px; }
+        .contact-header .section-heading { color: var(--white); }
+        .contact-header .section-intro { color: var(--text-muted); }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .contact-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.07);
+            border-radius: 10px;
+            padding: 32px 28px;
+        }
+
+        .contact-label {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 14px;
+        }
+
+        .contact-value {
+            font-size: 16px;
+            color: var(--white);
+            line-height: 1.6;
+        }
+
+        .contact-value a {
+            color: var(--gold-light);
+            text-decoration: none;
+        }
+
+        .contact-value a:hover { text-decoration: underline; }
+
+        .contact-sub {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 8px;
+            line-height: 1.5;
+        }
+
+        /* ══════════════════════════════════
+           FOOTER
+           ══════════════════════════════════ */
+        .footer {
+            background: var(--navy);
+            border-top: 1px solid rgba(255,255,255,0.06);
+            padding: 64px 0 40px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+
+        .footer-brand .logo-main {
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+
+        .footer-brand .logo-sub {
+            font-size: 9px;
+            margin-bottom: 16px;
+        }
+
+        .footer-brand p {
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.7;
+            max-width: 280px;
+        }
+
+        .footer-col h4 {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul { list-style: none; }
+
+        .footer-col li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 13px;
+            transition: color 0.2s;
+        }
+
+        .footer-col a:hover { color: var(--white); }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.06);
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            color: rgba(255,255,255,0.3);
+        }
+
+        /* ══════════════════════════════════
+           ANIMATIONS
+           ══════════════════════════════════ */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ══════════════════════════════════
+           RESPONSIVE
+           ══════════════════════════════════ */
+        @media (max-width: 1024px) {
+            .hero-grid { grid-template-columns: 1fr; gap: 48px; }
+            .hero-stats { grid-template-columns: 1fr 1fr; }
+            .exec-grid { grid-template-columns: 1fr; }
+            .strategy-grid { grid-template-columns: 1fr; }
+            .founder-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-center {
+                display: none;
+                position: absolute;
+                top: 72px;
+                left: 0;
+                right: 0;
+                background: var(--navy);
+                flex-direction: column;
+                padding: 20px;
+                gap: 0;
+                border-top: 1px solid rgba(255,255,255,0.08);
+                z-index: 999;
+            }
+            .nav-center.show { display: flex; }
+            .nav-center li a {
+                display: block;
+                padding: 14px 0;
+                border-bottom: 1px solid rgba(255,255,255,0.05);
+            }
+            .btn-contact-nav { display: none; }
+            .mobile-toggle { display: block; }
+            .top-bar-inner { padding: 0 20px; }
+            .breadcrumb-inner { padding: 0 20px; }
+            .breadcrumb { display: none; }
+
+            .hero { padding: 48px 0 56px; }
+            .hero-inner { padding: 0 20px; }
+            .hero h1 { font-size: 36px; }
+            .hero-desc { font-size: 15px; }
+
+            .section-container { padding: 0 20px; }
+            .section-heading { font-size: 28px; }
+            .section-intro { font-size: 15px; }
+
+            .opp-cards { grid-template-columns: 1fr; }
+            .thesis-principles { grid-template-columns: 1fr; }
+            .pillar-cards { grid-template-columns: 1fr; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+
+            .exec-summary, .opportunity, .thesis, .architecture,
+            .founder, .contact {
+                padding: 56px 0;
+            }
+
+            .founder-grid { grid-template-columns: 1fr; text-align: center; }
+            .founder-photo { margin: 0 auto; }
+            .founder-name { font-size: 28px; }
+
+            .thesis-quote { font-size: 16px; }
+
+            .stat-value { font-size: 26px; }
+
+            .pillar-card { margin-bottom: 0; }
+            .pillar-card-body p { font-size: 14px; }
+        }
+
+        @media (max-width: 480px) {
+            .hero-stats { grid-template-columns: 1fr; }
+            .stat-box:nth-child(even) { padding-left: 0; border-left: none; }
+            .stat-box:nth-child(odd) { padding-right: 0; }
+            .stat-box { border-bottom: 1px solid rgba(255,255,255,0.08); }
+            .stat-box:last-child { border-bottom: none; }
+            .hero h1 { font-size: 28px; }
+            .hero-desc { font-size: 14px; }
+            .section-heading { font-size: 24px; }
+            .contact-card { padding: 24px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ═══════ NAVIGATION ═══════ -->
+    <nav class="top-bar">
+        <div class="top-bar-inner">
+            <div class="logo">
+                <span class="logo-main">LINKASIA WORLD</span>
+                <span class="logo-sub">Proprietary Capital</span>
+            </div>
+            <ul class="nav-center">
+                <li><a href="#about">About</a></li>
+                <li><a href="#thesis">Thesis</a></li>
+                <li><a href="#architecture">Architecture</a></li>
+                <li><a href="#founder">Founder</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-right">
+                <a href="kr.html" class="lang-switch">KR</a>
+                <a href="#contact" class="btn-contact-nav">Get in Touch</a>
+            </div>
+            <button class="mobile-toggle" onclick="document.querySelector('.nav-center').classList.toggle('show')">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ═══════ BREADCRUMB ═══════ -->
+    <div class="breadcrumb">
+        <div class="breadcrumb-inner">
+            <a href="#">LINKASIA WORLD</a>
+            <span>›</span>
+            Proprietary Capital · Asia–US Corridor
+        </div>
+    </div>
+
+    <!-- ═══════ HERO ═══════ -->
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-grid">
+                <div class="hero-left">
+                    <h1><em>Conviction,</em><br>unconstrained</h1>
+                    <p class="hero-desc">LINKASIA WORLD is a proprietary capital firm investing in early-stage founders across Asia and the US. Our primary engine is conviction-driven venture investment, compounded through internal systematic strategies</p>
+                    <a href="#contact" class="btn-primary">
+                        Get in Touch
+                        <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-box">
+                        <div class="stat-label">Operating Axes</div>
+                        <div class="stat-value">3 Pillars</div>
+                        <div class="stat-desc">Ventures · Research · Treasury</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">Geographic Split</div>
+                        <div class="stat-value">70 / 30</div>
+                        <div class="stat-desc">United States / Asia</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">Stage</div>
+                        <div class="stat-value">Seed – A</div>
+                        <div class="stat-desc">Seed – Pre-A</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">Headquarters</div>
+                        <div class="stat-value">New Jersey</div>
+                        <div class="stat-desc">United States</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════ EXECUTIVE SUMMARY ═══════ -->
+    <section class="exec-summary" id="about">
+        <div class="section-container">
+            <div class="section-eyebrow fade-up">EXECUTIVE SUMMARY</div>
+            <h2 class="section-heading fade-up">A Designed<br>Closed-Loop Capital Firm</h2>
+            <div class="exec-grid" style="margin-top: 48px;">
+                <div class="exec-text fade-up">
+                    <p>LINKASIA WORLD was designed to target two structural asymmetries</p>
+                    <p>First, the gap between founders who see the Asia–US corridor as one market, and investors who see it as two. We stand on that bridge</p>
+                    <p>Second, the gap between capital that must deploy and capital that can wait. We wait</p>
+                    <div class="exec-quote">
+                        <p>We move with patience, act independently, and are structurally aligned with the founders we back. We don't chase cycles, don't run on fund timers, and don't outsource conviction</p>
+                    </div>
+                </div>
+                <div class="exec-diagram fade-up">
+                    <div class="exec-diagram-title">At a Glance</div>
+                    <div class="exec-flow">
+                        <div class="exec-flow-item">
+                            <span class="exec-flow-label">Entity — Single-member LLC, New Jersey</span>
+                        </div>
+                        <div class="exec-flow-item">
+                            <span class="exec-flow-label">Founded — 2025</span>
+                        </div>
+                        <div class="exec-flow-item">
+                            <span class="exec-flow-label">Capital Base — Proprietary</span>
+                        </div>
+                        <div class="exec-flow-item">
+                            <span class="exec-flow-label">Model — Closed-Loop (Treasury ↔ Ventures)</span>
+                        </div>
+                        <div class="exec-flow-item">
+                            <span class="exec-flow-label">Focus — Early stage, Asia–US Corridor</span>
+                        </div>
+                        <div class="exec-flow-item">
+                            <span class="exec-flow-label">Approach — Patient · Focused · Founder-Aligned</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════ MARKET OPPORTUNITY ═══════ -->
+    <section class="opportunity">
+        <div class="section-container">
+            <div class="opportunity-header">
+                <div class="section-eyebrow fade-up">THE OPPORTUNITY</div>
+                <h2 class="section-heading fade-up">Where the Corridor Is Mispriced</h2>
+                <p class="section-intro fade-up">Three structural opportunities remain systematically underpriced in the Asia–US corridor</p>
+            </div>
+            <div class="opp-cards">
+                <div class="opp-card fade-up">
+                    <div class="opp-num">01</div>
+                    <h3>Talent Arbitrage</h3>
+                    <p>World-class founders in Seoul, Tokyo, Singapore, and Bengaluru build at 1/3 the cost base of the Bay Area. Yet the moment they enter the US market, they're priced as outsiders</p>
+                </div>
+                <div class="opp-card fade-up">
+                    <div class="opp-num">02</div>
+                    <h3>Distribution Asymmetry</h3>
+                    <p>US funds underwrite US revenue. Asian funds underwrite local revenue. Companies bridging both are systematically under-covered and over-penalized</p>
+                </div>
+                <div class="opp-card fade-up">
+                    <div class="opp-num">03</div>
+                    <h3>Capital Cadence Mismatch</h3>
+                    <p>Corridor companies need investors who can endure geographic pivots. Most LP-backed funds can't. We can</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════ THESIS ═══════ -->
+    <section class="thesis" id="thesis">
+        <div class="section-container">
+            <div class="thesis-header">
+                <div class="section-eyebrow fade-up">INVESTMENT THESIS</div>
+                <h2 class="section-heading fade-up">Ventures Compound<br>Capital Recycles</h2>
+            </div>
+            <p class="thesis-big-quote fade-up">"Internal strategy returns are reinvested as venture conviction. That's why we back founders without deployment pressure, without fund-cycle bias."</p>
+            <div class="thesis-principles">
+                <div class="thesis-card fade-up">
+                    <h3>We Own Our Capital</h3>
+                    <p>No external LPs means no deployment pressure, no mark-to-market politics, and no forced liquidation. Conviction is not diluted by committee</p>
+                </div>
+                <div class="thesis-card fade-up">
+                    <h3>We Earn Our Runway</h3>
+                    <p>Internal systematic strategies are a treasury function, not a product. Operating cash is decoupled from investment returns</p>
+                </div>
+                <div class="thesis-card fade-up">
+                    <h3>We Commit Long</h3>
+                    <p>Holding periods are measured in years, not quarters. Founders know we'll stay on the cap table through awkward periods</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════ FIRM ARCHITECTURE ═══════ -->
+    <section class="architecture" id="architecture">
+        <div class="section-container">
+            <div class="architecture-header">
+                <div class="section-eyebrow fade-up">FIRM ARCHITECTURE</div>
+                <h2 class="section-heading fade-up">Three Axes, One Balance Sheet</h2>
+                <p class="section-intro fade-up">Three independent axes operating within a single closed-loop capital structure</p>
+            </div>
+            <div class="pillar-cards">
+                <div class="pillar-card fade-up">
+                    <div class="pillar-card-header">
+                        <div class="pillar-tag">Pillar 01</div>
+                        <h3>Linkasia Ventures</h3>
+                        <div class="pillar-role">Primary Engine</div>
+                    </div>
+                    <div class="pillar-card-body">
+                        <p>Lead or co-lead early rounds for companies operating across the Asia–US corridor. Meaningful ownership, concentrated portfolio</p>
+                    </div>
+                </div>
+                <div class="pillar-card fade-up">
+                    <div class="pillar-card-header">
+                        <div class="pillar-tag">Pillar 02</div>
+                        <h3>Research & Ops</h3>
+                        <div class="pillar-role">Shared Brain</div>
+                    </div>
+                    <div class="pillar-card-body">
+                        <p>Produces thesis, data, and market structure work that informs both venture decisions and treasury positioning</p>
+                    </div>
+                </div>
+                <div class="pillar-card fade-up">
+                    <div class="pillar-card-header">
+                        <div class="pillar-tag">Pillar 03</div>
+                        <h3>Velox Desk</h3>
+                        <div class="pillar-role">Internal Treasury</div>
+                    </div>
+                    <div class="pillar-card-body">
+                        <p>Runs systematic strategies across liquid markets. Preserves and compounds balance sheet capital so Ventures can deploy with patient conviction</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════ FOUNDER ═══════ -->
+    <section class="founder" id="founder">
+        <div class="section-container">
+            <div class="founder-header">
+                <div class="section-eyebrow fade-up">FOUNDER</div>
+                <h2 class="section-heading fade-up">Founder</h2>
+            </div>
+            <div class="founder-grid">
+                <div class="founder-avatar fade-up">
+                    <div class="avatar-initials">EL</div>
+                    <h3>Ethan.Y.Lee</h3>
+                    <div class="founder-name-en">이영환 (Younghwan Lee)</div>
+                    <div class="founder-title">Founder & CEO</div>
+                    <div class="founder-cities">New Jersey · Seoul</div>
+                </div>
+                <div class="founder-content fade-up">
+                    <h3>Single Point of Accountability</h3>
+                    <p class="founder-bio">Multi-generational access to Asia-Pacific capital markets infrastructure. Leads corridor-based early-stage venture investing grounded in an embodied understanding of exchange mechanisms, brokerage structures, and cross-border capital flows</p>
+                    <p class="founder-bio">Sole decision-maker for all LINKASIA WORLD investments. Single point of accountability for founders and the capital base</p>
+                    <ul class="career-list">
+                        <li><span class="career-year">2025 —</span><span class="career-detail">Founded LINKASIA WORLD, NJ LLC</span></li>
+                        <li><span class="career-year">Prior Career</span><span class="career-detail">VC Compliance Officer (3+ years)</span></li>
+                        <li><span class="career-year">Track Record</span><span class="career-detail">3 fund liquidations completed — full investment cycle</span></li>
+                        <li><span class="career-year">China PE</span><span class="career-detail">Founding member, Peking University PE fund (Blackstone China partnership)</span></li>
+                        <li><span class="career-year">Award</span><span class="career-detail">Minister of Trade, Industry & Energy Award (2020)</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════ DISCLAIMER ═══════ -->
+    <div class="disclaimer">
+        <div class="section-container">
+            <p>This website is for informational purposes only. It does not constitute an offer to sell or a solicitation to buy any securities. LINKASIA WORLD LLC operates on proprietary capital and does not solicit external capital unless otherwise stated. Past performance does not guarantee future results</p>
+        </div>
+    </div>
+
+    <!-- ═══════ CONTACT ═══════ -->
+    <section class="contact" id="contact">
+        <div class="section-container">
+            <div class="contact-header">
+                <div class="section-eyebrow fade-up">CONTACT</div>
+                <h2 class="section-heading fade-up">Get in Touch</h2>
+                <p class="section-intro fade-up">Let's compound together</p>
+            </div>
+            <div class="contact-grid fade-up">
+                <div class="contact-card">
+                    <div class="contact-label">Email</div>
+                    <div class="contact-value"><a href="mailto:yhl@linkasia.world">yhl@linkasia.world</a></div>
+                    <div class="contact-sub">Ethan Younghwan Lee<br>Founder & Managing Principal</div>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-label">Entity</div>
+                    <div class="contact-value">LINKASIA WORLD LLC</div>
+                    <div class="contact-sub">State of New Jersey<br>Single-member LLC</div>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-label">Operating Cities</div>
+                    <div class="contact-value">New Jersey · Seoul</div>
+                    <div class="contact-sub">Asia–US Corridor</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════ FOOTER ═══════ -->
+    <footer class="footer">
+        <div class="section-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo" style="margin-bottom: 16px;">
+                        <span class="logo-main">LINKASIA WORLD</span>
+                        <span class="logo-sub">Proprietary Capital</span>
+                    </div>
+                    <p>Proprietary capital, early-stage ventures<br>Asia–US Corridor, systematic treasury</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Firm</h4>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#thesis">Thesis</a></li>
+                        <li><a href="#architecture">Architecture</a></li>
+                        <li><a href="#founder">Founder</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Investing</h4>
+                    <ul>
+                        <li><a href="#architecture">Linkasia Ventures</a></li>
+                        <li><a href="#architecture">Velox Desk</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:yhl@linkasia.world">yhl@linkasia.world</a></li>
+                        <li><a href="#contact">Get in Touch</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2025 LINKASIA WORLD LLC  All rights reserved</span>
+                <span>Proprietary Capital · New Jersey</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ═══════ SCROLL ANIMATIONS ═══════ -->
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+        // Mobile menu toggle
+        document.querySelector('.mobile-toggle')?.addEventListener('click', function() {
+            document.querySelector('.nav-center').classList.toggle('show');
+        });
+    </script>
+</body>
+</html>

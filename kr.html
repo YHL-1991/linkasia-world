@@ -1,0 +1,1589 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LINKASIA WORLD — 자기자본 투자, 장기적 비전</title>
+    <meta name="description" content="LINKASIA WORLD는 아시아와 미국을 잇는 초기기업 투자에 특화된 자기자본 투자 회사입니다. 내부 시스테매틱 전략으로 자본을 자체 조달합니다.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+    <style>
+        :root {
+            --navy: #0E1116;
+            --navy-light: #171B22;
+            --navy-mid: #1E2530;
+            --gold: #C9A96E;
+            --gold-light: #E4CFA2;
+            --warm-gray: #F3EEE4;
+            --warm-gray-dark: #E5DDD0;
+            --white: #ffffff;
+            --text-dark: #1a1a2e;
+            --text-body: #4a4a5a;
+            --text-muted: #8B92A3;
+            --text-light: rgba(255,255,255,0.7);
+            --border: #e2e0db;
+            --font-serif: 'DM Serif Display', Georgia, 'Times New Roman', serif;
+            --font-sans: 'Pretendard Variable', 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--font-sans);
+            line-height: 1.7;
+            color: var(--text-dark);
+            background: var(--white);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ══════════════════════════════════════
+           NAVIGATION
+           ══════════════════════════════════════ */
+        .top-bar {
+            background: var(--navy);
+            color: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .top-bar-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 72px;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.1;
+        }
+
+        .logo-main {
+            font-family: var(--font-serif);
+            font-size: 22px;
+            color: var(--white);
+            letter-spacing: 0.5px;
+        }
+
+        .logo-sub {
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-top: 2px;
+        }
+
+        .nav-center {
+            display: flex;
+            gap: 36px;
+            list-style: none;
+        }
+
+        .nav-center a {
+            color: rgba(255,255,255,0.65);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.2px;
+            padding: 8px 0;
+            transition: color 0.2s;
+            position: relative;
+        }
+
+        .nav-center a:hover { color: var(--white); }
+
+        .nav-center a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: width 0.3s;
+        }
+
+        .nav-center a:hover::after { width: 100%; }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .lang-switch {
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            padding: 6px 12px;
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 3px;
+            transition: all 0.2s;
+        }
+
+        .lang-switch:hover {
+            color: var(--white);
+            border-color: rgba(255,255,255,0.4);
+        }
+
+        .btn-contact-nav {
+            background: transparent;
+            color: var(--gold);
+            border: 1px solid var(--gold);
+            padding: 10px 24px;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s;
+            letter-spacing: 0.3px;
+        }
+
+        .btn-contact-nav:hover {
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .mobile-toggle span {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: var(--white);
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+
+        /* ══════════════════════════════════
+           BREADCRUMB
+           ══════════════════════════════════ */
+        .breadcrumb {
+            background: var(--navy-light);
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .breadcrumb-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 40px;
+            font-size: 12px;
+            color: rgba(255,255,255,0.4);
+        }
+
+        .breadcrumb-inner a {
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+        }
+
+        .breadcrumb-inner a:hover { color: var(--gold); }
+        .breadcrumb-inner span { color: rgba(255,255,255,0.3); margin: 0 8px; }
+
+        /* ══════════════════════════════
+           HERO
+           ══════════════════════════════ */
+        .hero {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+            color: var(--white);
+            padding: 100px 0 110px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 70%;
+            height: 200%;
+            background: radial-gradient(ellipse, rgba(201,169,110,0.06) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-family: var(--font-serif);
+            font-size: 46px;
+            font-weight: 400;
+            line-height: 1.25;
+            margin-bottom: 28px;
+            letter-spacing: -0.3px;
+        }
+
+        .hero h1 em {
+            font-style: normal;
+            color: var(--gold);
+        }
+
+        .hero-desc {
+            font-size: 17px;
+            line-height: 1.8;
+            color: var(--text-light);
+            margin-bottom: 40px;
+            max-width: 480px;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--gold);
+            color: var(--navy);
+            padding: 14px 32px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+            letter-spacing: 0.2px;
+        }
+
+        .btn-primary:hover { background: var(--gold-light); }
+
+        .btn-primary svg {
+            width: 16px;
+            height: 16px;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+        }
+
+        .stat-box {
+            padding: 28px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            position: relative;
+        }
+
+        .stat-box:nth-child(odd) {
+            padding-right: 32px;
+        }
+
+        .stat-box:nth-child(even) {
+            padding-left: 32px;
+            border-left: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .stat-box:nth-last-child(-n+2) {
+            border-bottom: none;
+        }
+
+        .stat-label {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 12px;
+        }
+
+        .stat-value {
+            font-family: var(--font-serif);
+            font-size: 32px;
+            color: var(--white);
+            margin-bottom: 6px;
+            line-height: 1.2;
+        }
+
+        .stat-desc {
+            font-size: 12px;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* ══════════════════════════════════════════
+           SECTION CONTAINER
+           ══════════════════════════════════════════ */
+        .section-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* ══════════════════════════════════
+           EXECUTIVE SUMMARY
+           ══════════════════════════════════ */
+        .exec-summary {
+            background: var(--warm-gray);
+            padding: 100px 0;
+        }
+
+        .exec-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 72px;
+            align-items: start;
+        }
+
+        .section-eyebrow {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 16px;
+        }
+
+        .section-heading {
+            font-family: var(--font-serif);
+            font-size: 38px;
+            font-weight: 400;
+            color: var(--text-dark);
+            line-height: 1.3;
+            margin-bottom: 16px;
+        }
+
+        .section-intro {
+            font-size: 17px;
+            color: var(--text-body);
+            line-height: 1.8;
+            max-width: 640px;
+        }
+
+        .exec-text p {
+            font-size: 16px;
+            color: var(--text-body);
+            line-height: 1.9;
+            margin-bottom: 20px;
+        }
+
+        .exec-quote {
+            margin-top: 32px;
+            padding: 28px 32px;
+            background: var(--white);
+            border-left: 4px solid var(--gold);
+            border-radius: 0 8px 8px 0;
+        }
+
+        .exec-quote p {
+            font-size: 17px;
+            color: var(--text-dark);
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+
+        .exec-diagram {
+            background: var(--navy);
+            border-radius: 12px;
+            padding: 44px 36px;
+            color: var(--white);
+        }
+
+        .exec-diagram-title {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 28px;
+        }
+
+        .exec-flow {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .exec-flow-item {
+            display: flex;
+            align-items: center;
+            gap: 0;
+            padding: 16px 20px;
+            padding-left: 20px;
+            background: rgba(255,255,255,0.04);
+            border-radius: 6px;
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .exec-flow-num {
+            font-family: var(--font-serif);
+            font-size: 20px;
+            color: var(--gold);
+            min-width: 32px;
+        }
+
+        .exec-flow-label {
+            font-size: 14px;
+            color: rgba(255,255,255,0.85);
+            font-weight: 500;
+        }
+
+        .exec-flow-arrow {
+            text-align: center;
+            color: var(--gold);
+            font-size: 18px;
+            padding: 4px 0;
+        }
+
+        /* ══════════════════════════════════
+           MARKET OPPORTUNITY
+           ══════════════════════════════════ */
+        .opportunity {
+            background: var(--white);
+            padding: 100px 0;
+        }
+
+        .opportunity-header { margin-bottom: 64px; }
+
+        .opp-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .opp-card {
+            background: var(--warm-gray);
+            border-radius: 12px;
+            padding: 40px 32px;
+            border: 1px solid var(--border);
+            transition: transform 0.2s;
+        }
+
+        .opp-card:hover { transform: translateY(-4px); }
+
+        .opp-num {
+            font-family: var(--font-serif);
+            font-size: 32px;
+            color: var(--gold);
+            margin-bottom: 16px;
+        }
+
+        .opp-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+        }
+
+        .opp-card p {
+            font-size: 15px;
+            color: var(--text-body);
+            line-height: 1.7;
+        }
+
+        /* ══════════════════════════════════
+           THESIS
+           ══════════════════════════════════ */
+        .thesis {
+            background: var(--navy);
+            color: var(--white);
+            padding: 100px 0;
+        }
+
+        .thesis-header { margin-bottom: 64px; }
+
+        .thesis-header .section-heading {
+            color: var(--white);
+        }
+
+        .thesis-header .section-intro {
+            color: var(--text-muted);
+        }
+
+        .thesis-big-quote {
+            font-family: var(--font-serif);
+            font-size: 22px;
+            color: var(--gold-light);
+            line-height: 1.6;
+            max-width: 800px;
+            margin-bottom: 64px;
+            font-style: italic;
+        }
+
+        .thesis-principles {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .thesis-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.07);
+            border-radius: 10px;
+            padding: 36px 28px;
+        }
+
+        .thesis-card h3 {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 14px;
+        }
+
+        .thesis-card p {
+            font-size: 15px;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        /* ══════════════════════════════════
+           FIRM ARCHITECTURE (3 PILLARS)
+           ══════════════════════════════════ */
+        .architecture {
+            background: var(--warm-gray);
+            padding: 100px 0;
+        }
+
+        .architecture-header { margin-bottom: 64px; }
+
+        .pillar-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .pillar-card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(14,17,22,0.08);
+        }
+
+        .pillar-card-header {
+            background: var(--navy);
+            padding: 28px 28px 24px;
+        }
+
+        .pillar-tag {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 8px;
+        }
+
+        .pillar-card-header h3 {
+            font-family: var(--font-serif);
+            font-size: 22px;
+            color: var(--white);
+            font-weight: 400;
+        }
+
+        .pillar-card-header .pillar-role {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        .pillar-card-body {
+            padding: 28px;
+        }
+
+        .pillar-card-body p {
+            font-size: 15px;
+            color: var(--text-body);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .pillar-list {
+            list-style: none;
+        }
+
+        .pillar-list li {
+            font-size: 14px;
+            color: var(--text-body);
+            padding: 8px 0;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .pillar-list li:last-child { border-bottom: none; }
+
+        .pillar-list li::before {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background: var(--gold);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        /* ══════════════════════════════════
+           INVESTMENT STRATEGY
+           ══════════════════════════════════ */
+        .strategy {
+            background: var(--white);
+            padding: 100px 0;
+        }
+
+        .strategy-header { margin-bottom: 64px; }
+
+        .strategy-grid {
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            gap: 64px;
+            align-items: start;
+        }
+
+        .strategy-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            margin-bottom: 40px;
+        }
+
+        .strategy-table thead th {
+            background: var(--navy);
+            color: var(--gold);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 14px 16px;
+            text-align: left;
+        }
+
+        .strategy-table thead th:first-child { border-radius: 8px 0 0 0; }
+        .strategy-table thead th:last-child { border-radius: 0 8px 0 0; }
+
+        .strategy-table tbody td {
+            padding: 14px 16px;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-body);
+        }
+
+        .strategy-table tbody tr:last-child td { border-bottom: none; }
+
+        .strategy-table tbody td:first-child {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .strategy-process h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+
+        .strategy-steps {
+            list-style: none;
+            counter-reset: step;
+        }
+
+        .strategy-steps li {
+            counter-increment: step;
+            position: relative;
+            padding: 12px 0 12px 40px;
+            font-size: 14px;
+            color: var(--text-body);
+            line-height: 1.6;
+        }
+
+        .strategy-steps li::before {
+            content: counter(step);
+            position: absolute;
+            left: 0;
+            top: 12px;
+            width: 26px;
+            height: 26px;
+            background: var(--gold);
+            color: var(--navy);
+            border-radius: 50%;
+            font-size: 12px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* FOCUS SECTORS */
+        .sectors {
+            margin-top: 80px;
+        }
+
+        .sectors h3 {
+            font-family: var(--font-serif);
+            font-size: 28px;
+            font-weight: 400;
+            color: var(--text-dark);
+            margin-bottom: 40px;
+        }
+
+        .sector-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .sector-card {
+            background: var(--warm-gray);
+            border-radius: 10px;
+            padding: 32px 24px;
+            border: 1px solid var(--border);
+        }
+
+        .sector-num {
+            font-family: var(--font-serif);
+            font-size: 24px;
+            color: var(--gold);
+            margin-bottom: 12px;
+        }
+
+        .sector-card h4 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+
+        .sector-card p {
+            font-size: 13px;
+            color: var(--text-body);
+            line-height: 1.6;
+        }
+
+        /* ══════════════════════════════════
+           GEOGRAPHIC STRATEGY
+           ══════════════════════════════════ */
+        .geography {
+            background: var(--navy);
+            color: var(--white);
+            padding: 100px 0;
+        }
+
+        .geography-header { margin-bottom: 64px; }
+
+        .geography-header .section-heading { color: var(--white); }
+        .geography-header .section-intro { color: var(--text-muted); }
+
+        .geo-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .geo-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.07);
+            border-radius: 12px;
+            padding: 44px 36px;
+        }
+
+        .geo-pct {
+            font-family: var(--font-serif);
+            font-size: 56px;
+            color: var(--gold);
+            margin-bottom: 8px;
+        }
+
+        .geo-label {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold-light);
+            margin-bottom: 20px;
+        }
+
+        .geo-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 12px;
+        }
+
+        .geo-card p {
+            font-size: 15px;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        /* ══════════════════════════════════
+           FOUNDER
+           ══════════════════════════════════ */
+        .founder {
+            background: var(--warm-gray);
+            padding: 100px 0;
+        }
+
+        .founder-header { margin-bottom: 64px; }
+
+        .founder-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 64px;
+            align-items: start;
+        }
+
+        .founder-avatar {
+            background: var(--navy);
+            border-radius: 12px;
+            padding: 48px 32px;
+            text-align: center;
+        }
+
+        .avatar-initials {
+            width: 96px;
+            height: 96px;
+            border: 2px solid var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-serif);
+            font-size: 32px;
+            color: var(--gold);
+            margin: 0 auto 24px;
+        }
+
+        .founder-avatar h3 {
+            font-family: var(--font-serif);
+            font-size: 24px;
+            color: var(--white);
+            margin-bottom: 4px;
+        }
+
+        .founder-avatar .founder-name-en {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+        }
+
+        .founder-avatar .founder-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--gold);
+            letter-spacing: 0.5px;
+        }
+
+        .founder-cities {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 20px;
+            letter-spacing: 0.5px;
+        }
+
+        .founder-content h3 {
+            font-family: var(--font-serif);
+            font-size: 28px;
+            font-weight: 400;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+
+        .founder-bio {
+            font-size: 16px;
+            color: var(--text-body);
+            line-height: 1.8;
+            margin-bottom: 32px;
+        }
+
+        .career-list {
+            list-style: none;
+        }
+
+        .career-list li {
+            display: flex;
+            gap: 16px;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 14px;
+            align-items: baseline;
+        }
+
+        .career-list li:last-child { border-bottom: none; }
+
+        .career-year {
+            color: var(--gold);
+            font-weight: 700;
+            min-width: 100px;
+            font-size: 13px;
+        }
+
+        .career-detail {
+            color: var(--text-body);
+            line-height: 1.6;
+        }
+
+        /* ══════════════════════════════════
+           ROADMAP
+           ══════════════════════════════════ */
+        .roadmap {
+            background: var(--white);
+            padding: 100px 0;
+        }
+
+        .roadmap-header { margin-bottom: 64px; }
+
+        .roadmap-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .roadmap-card {
+            background: var(--warm-gray);
+            border-radius: 12px;
+            padding: 36px 28px;
+            border: 1px solid var(--border);
+            position: relative;
+        }
+
+        .roadmap-year {
+            font-family: var(--font-serif);
+            font-size: 36px;
+            color: var(--gold);
+            margin-bottom: 4px;
+        }
+
+        .roadmap-phase {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+        }
+
+        .roadmap-items {
+            list-style: none;
+        }
+
+        .roadmap-items li {
+            font-size: 14px;
+            color: var(--text-body);
+            padding: 8px 0;
+            padding-left: 18px;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .roadmap-items li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 15px;
+            width: 6px;
+            height: 6px;
+            background: var(--gold);
+            border-radius: 50%;
+        }
+
+        /* ══════════════════════════════════
+           DISCLAIMER
+           ══════════════════════════════════ */
+        .disclaimer {
+            background: var(--navy-light);
+            padding: 44px 0;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .disclaimer p {
+            font-size: 12px;
+            color: var(--text-muted);
+            line-height: 1.8;
+            max-width: 920px;
+        }
+
+        /* ══════════════════════════════════
+           CONTACT
+           ══════════════════════════════════ */
+        .contact {
+            background: var(--navy);
+            color: var(--white);
+            padding: 100px 0;
+        }
+
+        .contact-header { margin-bottom: 64px; }
+        .contact-header .section-heading { color: var(--white); }
+        .contact-header .section-intro { color: var(--text-muted); }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .contact-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.07);
+            border-radius: 10px;
+            padding: 32px 28px;
+        }
+
+        .contact-label {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 14px;
+        }
+
+        .contact-value {
+            font-size: 16px;
+            color: var(--white);
+            line-height: 1.6;
+        }
+
+        .contact-value a {
+            color: var(--gold-light);
+            text-decoration: none;
+        }
+
+        .contact-value a:hover { text-decoration: underline; }
+
+        .contact-sub {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 8px;
+            line-height: 1.5;
+        }
+
+        /* ══════════════════════════════════
+           FOOTER
+           ══════════════════════════════════ */
+        .footer {
+            background: var(--navy);
+            border-top: 1px solid rgba(255,255,255,0.06);
+            padding: 64px 0 40px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+
+        .footer-brand .logo-main {
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+
+        .footer-brand .logo-sub {
+            font-size: 9px;
+            margin-bottom: 16px;
+        }
+
+        .footer-brand p {
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.7;
+            max-width: 280px;
+        }
+
+        .footer-col h4 {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul { list-style: none; }
+
+        .footer-col li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 13px;
+            transition: color 0.2s;
+        }
+
+        .footer-col a:hover { color: var(--white); }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.06);
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            color: rgba(255,255,255,0.3);
+        }
+
+        /* ══════════════════════════════════
+           ANIMATIONS
+           ══════════════════════════════════ */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ══════════════════════════════════
+           RESPONSIVE
+           ══════════════════════════════════ */
+        @media (max-width: 1024px) {
+            .hero-grid { grid-template-columns: 1fr; gap: 48px; }
+            .hero-stats { grid-template-columns: 1fr 1fr; }
+            .exec-grid { grid-template-columns: 1fr; }
+            .strategy-grid { grid-template-columns: 1fr; }
+            .founder-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-center {
+                display: none;
+                position: absolute;
+                top: 72px;
+                left: 0;
+                right: 0;
+                background: var(--navy);
+                flex-direction: column;
+                padding: 20px;
+                gap: 0;
+                border-top: 1px solid rgba(255,255,255,0.08);
+                z-index: 999;
+            }
+            .nav-center.show { display: flex; }
+            .nav-center li a {
+                display: block;
+                padding: 14px 0;
+                border-bottom: 1px solid rgba(255,255,255,0.05);
+            }
+            .btn-contact-nav { display: none; }
+            .mobile-toggle { display: block; }
+            .top-bar-inner { padding: 0 20px; }
+            .breadcrumb-inner { padding: 0 20px; }
+            .breadcrumb { display: none; }
+
+            .hero { padding: 48px 0 56px; }
+            .hero-inner { padding: 0 20px; }
+            .hero h1 { font-size: 32px; }
+            .hero-desc { font-size: 15px; }
+
+            .section-container { padding: 0 20px; }
+            .section-heading { font-size: 26px; }
+            .section-intro { font-size: 15px; }
+
+            .opp-cards { grid-template-columns: 1fr; }
+            .thesis-principles { grid-template-columns: 1fr; }
+            .pillar-cards { grid-template-columns: 1fr; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+
+            .exec-summary, .opportunity, .thesis, .architecture,
+            .founder, .contact {
+                padding: 56px 0;
+            }
+
+            .founder-grid { grid-template-columns: 1fr; text-align: center; }
+            .founder-photo { margin: 0 auto; }
+            .founder-name { font-size: 28px; }
+
+            .thesis-quote { font-size: 16px; }
+
+            .stat-value { font-size: 26px; }
+
+            .pillar-card { margin-bottom: 0; }
+            .pillar-card-body p { font-size: 14px; }
+        }
+
+        @media (max-width: 480px) {
+            .hero-stats { grid-template-columns: 1fr; }
+            .stat-box:nth-child(even) { padding-left: 0; border-left: none; }
+            .stat-box:nth-child(odd) { padding-right: 0; }
+            .stat-box { border-bottom: 1px solid rgba(255,255,255,0.08); }
+            .stat-box:last-child { border-bottom: none; }
+            .hero h1 { font-size: 26px; }
+            .hero-desc { font-size: 14px; }
+            .section-heading { font-size: 24px; }
+            .contact-card { padding: 24px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ═══════ NAVIGATION ═══════ -->
+    <nav class="top-bar">
+        <div class="top-bar-inner">
+            <div class="logo">
+                <span class="logo-main">LINKASIA WORLD</span>
+                <span class="logo-sub">Proprietary Capital</span>
+            </div>
+            <ul class="nav-center">
+                <li><a href="#about">회사 소개</a></li>
+                <li><a href="#thesis">투자 철학</a></li>
+                <li><a href="#architecture">아키텍처</a></li>
+                <li><a href="#founder">창업자</a></li>
+                <li><a href="#contact">연락처</a></li>
+            </ul>
+            <div class="nav-right">
+                <a href="index.html" class="lang-switch">EN</a>
+                <a href="#contact" class="btn-contact-nav">문의하기</a>
+            </div>
+            <button class="mobile-toggle" onclick="document.querySelector('.nav-center').classList.toggle('show')">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ═══════ BREADCRUMB ═══════ -->
+    <div class="breadcrumb">
+        <div class="breadcrumb-inner">
+            <a href="#">LINKASIA WORLD</a>
+            <span>›</span>
+            자기자본 투자 · Asia–US Corridor
+        </div>
+    </div>
+
+    <!-- ═══════ HERO ═══════ -->
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-grid">
+                <div class="hero-left">
+                    <h1><em>확신을,</em><br>제약 없이</h1>
+                    <p class="hero-desc">LINKASIA WORLD는 아시아와 미국 전역의 초기 스타트업 창업자에게 투자하는 자기자본 기반 투자 펌입니다. 확신 주도의 벤처 투자를 주 엔진으로, 내부 시스테매틱 전략을 통해 자본을 복리로 운용합니다</p>
+                    <a href="#contact" class="btn-primary">
+                        문의하기
+                        <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-box">
+                        <div class="stat-label">운영 축</div>
+                        <div class="stat-value">3 Pillars</div>
+                        <div class="stat-desc">Ventures · Research · Treasury</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">지리 배분</div>
+                        <div class="stat-value">70 / 30</div>
+                        <div class="stat-desc">미국 / 아시아</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">스테이지</div>
+                        <div class="stat-value">Seed – A</div>
+                        <div class="stat-desc">Seed – Pre-A</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">본사</div>
+                        <div class="stat-value">New Jersey</div>
+                        <div class="stat-desc">미국 뉴저지</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════ EXECUTIVE SUMMARY ═══════ -->
+    <section class="exec-summary" id="about">
+        <div class="section-container">
+            <div class="section-eyebrow fade-up">EXECUTIVE SUMMARY</div>
+            <h2 class="section-heading fade-up">설계된 클로즈드-루프<br>자본 펌</h2>
+            <div class="exec-grid" style="margin-top: 48px;">
+                <div class="exec-text fade-up">
+                    <p>LINKASIA WORLD는 두 개의 구조적 비대칭을 겨냥해 설계되었습니다</p>
+                    <p>첫째, Asia–US 회랑을 하나의 시장으로 보는 창업자와, 이를 둘로 보는 투자자 사이의 비대칭. 우리는 그 다리 위에 있습니다</p>
+                    <p>둘째, 반드시 집행해야 하는 자본과 기다릴 수 있는 자본 사이의 비대칭. 우리는 기다립니다</p>
+                    <div class="exec-quote">
+                        <p>인내심을 가지고, 독립적으로 움직이며, 우리가 후원하는 창업자와 구조적으로 정렬되어 있습니다. 사이클을 쫓지 않고, 펀드 타이머에 맞춰 움직이지 않으며, 확신을 외부에 위탁하지 않습니다</p>
+                    </div>
+                </div>
+                <div class="exec-diagram fade-up">
+                    <div class="exec-diagram-title">한눈에 보기</div>
+                    <div class="exec-flow">
+                        <div class="exec-flow-item">
+                            <span class="exec-flow-label">법인 형태 — 단일 구성원 LLC, 뉴저지</span>
+                        </div>
+                        <div class="exec-flow-item">
+                            <span class="exec-flow-label">설립 — 2025</span>
+                        </div>
+                        <div class="exec-flow-item">
+                            <span class="exec-flow-label">자본 기반 — 자기자본 (Proprietary)</span>
+                        </div>
+                        <div class="exec-flow-item">
+                            <span class="exec-flow-label">모델 — 클로즈드-루프 (재무 ↔ 벤처)</span>
+                        </div>
+                        <div class="exec-flow-item">
+                            <span class="exec-flow-label">집중 영역 — 초기 스테이지, Asia–US 회랑</span>
+                        </div>
+                        <div class="exec-flow-item">
+                            <span class="exec-flow-label">운영 방식 — 인내 · 집중 · 창업자 정렬</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════ MARKET OPPORTUNITY ═══════ -->
+    <section class="opportunity">
+        <div class="section-container">
+            <div class="opportunity-header">
+                <div class="section-eyebrow fade-up">THE OPPORTUNITY</div>
+                <h2 class="section-heading fade-up">회랑이 잘못 가격 매겨지는 지점</h2>
+                <p class="section-intro fade-up">Asia–US 회랑에는 체계적으로 과소평가되는 세 가지 구조적 기회가 존재합니다</p>
+            </div>
+            <div class="opp-cards">
+                <div class="opp-card fade-up">
+                    <div class="opp-num">01</div>
+                    <h3>인재 차익</h3>
+                    <p>서울, 도쿄, 싱가포르, 뱅갈루루에서 세계 최고 수준의 창업자들이 베이 지역의 1/3 비용 기반으로 사업을 구축하고 있습니다. 그러나 미국 시장에 진입하는 순간 '외부인' 가격을 적용받습니다</p>
+                </div>
+                <div class="opp-card fade-up">
+                    <div class="opp-num">02</div>
+                    <h3>유통 비대칭</h3>
+                    <p>미국 펀드는 미국 매출을, 아시아 펀드는 로컬 매출을 언더라이팅합니다. 양쪽을 잇는 기업은 체계적으로 커버리지가 부족하고, 과도한 페널티를 받습니다</p>
+                </div>
+                <div class="opp-card fade-up">
+                    <div class="opp-num">03</div>
+                    <h3>자본 케이던스 미스매치</h3>
+                    <p>회랑 기업은 지리적 피벗을 견뎌낼 투자자가 필요합니다. 대부분의 LP 기반 펀드는 그럴 수 없습니다. 우리는 가능합니다</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════ THESIS ═══════ -->
+    <section class="thesis" id="thesis">
+        <div class="section-container">
+            <div class="thesis-header">
+                <div class="section-eyebrow fade-up">INVESTMENT THESIS</div>
+                <h2 class="section-heading fade-up">벤처는 복리를 만들고,<br>자본은 스스로 순환</h2>
+            </div>
+            <p class="thesis-big-quote fade-up">"내부 전략 수익이 벤처 확신으로 재투입됩니다. 그래서 우리는 집행 압박 없이, 펀드 사이클 편향 없이 창업자를 후원합니다."</p>
+            <div class="thesis-principles">
+                <div class="thesis-card fade-up">
+                    <h3>우리는 우리 자본을 소유한다</h3>
+                    <p>외부 LP가 없다는 것은 집행 압박이 없고, 마크-투-마켓 정치가 없으며, 강제 청산이 없다는 뜻입니다. 확신은 위원회에 의해 희석되지 않습니다</p>
+                </div>
+                <div class="thesis-card fade-up">
+                    <h3>우리는 런웨이를 스스로 마련한다</h3>
+                    <p>내부 시스테매틱 전략은 상품이 아닌 재무 기능입니다. 운영 현금이 투자 성과로부터 분리됩니다</p>
+                </div>
+                <div class="thesis-card fade-up">
+                    <h3>우리는 길게 약속한다</h3>
+                    <p>홀딩 기간은 분기가 아닌 연 단위로 측정됩니다. 창업자는 우리가 어색한 시기에도 캡테이블에 남아 있을 것임을 압니다</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════ FIRM ARCHITECTURE ═══════ -->
+    <section class="architecture" id="architecture">
+        <div class="section-container">
+            <div class="architecture-header">
+                <div class="section-eyebrow fade-up">FIRM ARCHITECTURE</div>
+                <h2 class="section-heading fade-up">세 개의 축, 하나의 대차대조표</h2>
+                <p class="section-intro fade-up">독립적인 세 축이 하나의 폐쇄형 자본 순환 구조 안에서 운영됩니다</p>
+            </div>
+            <div class="pillar-cards">
+                <div class="pillar-card fade-up">
+                    <div class="pillar-card-header">
+                        <div class="pillar-tag">Pillar 01</div>
+                        <h3>Linkasia Ventures</h3>
+                        <div class="pillar-role">주 엔진</div>
+                    </div>
+                    <div class="pillar-card-body">
+                        <p>Asia–US 회랑에서 활동하는 기업의 초기 라운드를 리드 또는 공동 리드합니다. 의미 있는 지분을 확보하고, 집중된 포트폴리오를 유지합니다</p>
+                    </div>
+                </div>
+                <div class="pillar-card fade-up">
+                    <div class="pillar-card-header">
+                        <div class="pillar-tag">Pillar 02</div>
+                        <h3>Research & Ops</h3>
+                        <div class="pillar-role">공유되는 두뇌</div>
+                    </div>
+                    <div class="pillar-card-body">
+                        <p>벤처 의사결정과 재무 포지셔닝 모두에 정보를 제공하는 테제, 데이터, 시장 구조 작업을 생산합니다</p>
+                    </div>
+                </div>
+                <div class="pillar-card fade-up">
+                    <div class="pillar-card-header">
+                        <div class="pillar-tag">Pillar 03</div>
+                        <h3>Velox Desk</h3>
+                        <div class="pillar-role">내부 재무</div>
+                    </div>
+                    <div class="pillar-card-body">
+                        <p>유동성 시장 전반에 걸쳐 자체 시스테매틱 전략을 운영합니다. 대차대조표 자본을 보존하고 복리로 늘려, Ventures가 인내심 있는 확신을 집행할 수 있도록 합니다</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════ FOUNDER ═══════ -->
+    <section class="founder" id="founder">
+        <div class="section-container">
+            <div class="founder-header">
+                <div class="section-eyebrow fade-up">FOUNDER</div>
+                <h2 class="section-heading fade-up">창업자</h2>
+            </div>
+            <div class="founder-grid">
+                <div class="founder-avatar fade-up">
+                    <div class="avatar-initials">EL</div>
+                    <h3>이영환</h3>
+                    <div class="founder-name-en">Ethan.Y.Lee</div>
+                    <div class="founder-title">Founder & CEO</div>
+                    <div class="founder-cities">서울, 뉴저지</div>
+                </div>
+                <div class="founder-content fade-up">
+                    <h3>책임의 단일 포인트</h3>
+                    <p class="founder-bio">아시아-태평양 자본시장 인프라에 다세대에 걸친 접근권을 보유. 거래소 메커니즘·브로커리지 구조·크로스보더 자본 흐름에 대한 체화된 이해를 바탕으로 회랑 기반 초기 벤처 투자를 주도합니다</p>
+                    <p class="founder-bio">LINKASIA WORLD 모든 투자의 단독 의사결정자. 창업자와 자본 기반에 대한 단일 책임 포인트</p>
+                    <ul class="career-list">
+                        <li><span class="career-year">2025 —</span><span class="career-detail">LINKASIA WORLD, NJ LLC 설립</span></li>
+                        <li><span class="career-year">이전 경력</span><span class="career-detail">VC 준법감시인 (3년 8개월)</span></li>
+                        <li><span class="career-year">실적</span><span class="career-detail">투자조합 3건 청산 완료 — 투자 사이클 전체 완주</span></li>
+                        <li><span class="career-year">중국 PE</span><span class="career-detail">베이징대 사모펀드 창립멤버 (블랙스톤 차이나 협력)</span></li>
+                        <li><span class="career-year">수상</span><span class="career-detail">산업통상자원부 장관상 (사회공헌 공로대상, 2020)</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════ DISCLAIMER ═══════ -->
+    <div class="disclaimer">
+        <div class="section-container">
+            <p>본 웹사이트의 내용은 정보 제공 목적입니다. 증권 매도 청약 또는 매수 권유가 아닙니다. LINKASIA WORLD LLC는 자기자본을 기반으로 운영되며, 별도 명시되지 않는 한 외부 자본을 모집하지 않습니다. 과거 실적이 미래 수익을 보장하지 않습니다</p>
+        </div>
+    </div>
+
+    <!-- ═══════ CONTACT ═══════ -->
+    <section class="contact" id="contact">
+        <div class="section-container">
+            <div class="contact-header">
+                <div class="section-eyebrow fade-up">CONTACT</div>
+                <h2 class="section-heading fade-up">연락처</h2>
+                <p class="section-intro fade-up">함께 복리를 만들어 갑시다</p>
+            </div>
+            <div class="contact-grid fade-up">
+                <div class="contact-card">
+                    <div class="contact-label">이메일</div>
+                    <div class="contact-value"><a href="mailto:yhl@linkasia.world">yhl@linkasia.world</a></div>
+                    <div class="contact-sub">이영환 (Ethan Younghwan Lee)<br>Founder & Managing Principal</div>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-label">법인</div>
+                    <div class="contact-value">LINKASIA WORLD LLC</div>
+                    <div class="contact-sub">미국 뉴저지주<br>단일 구성원 LLC</div>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-label">운영 거점</div>
+                    <div class="contact-value">서울, 뉴저지</div>
+                    <div class="contact-sub">Asia–US Corridor</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════ FOOTER ═══════ -->
+    <footer class="footer">
+        <div class="section-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo" style="margin-bottom: 16px;">
+                        <span class="logo-main">LINKASIA WORLD</span>
+                        <span class="logo-sub">Proprietary Capital</span>
+                    </div>
+                    <p>자기자본 기반 초기 벤처 투자<br>Asia–US 회랑, 시스테매틱 재무</p>
+                </div>
+                <div class="footer-col">
+                    <h4>회사</h4>
+                    <ul>
+                        <li><a href="#about">회사 소개</a></li>
+                        <li><a href="#thesis">투자 철학</a></li>
+                        <li><a href="#architecture">아키텍처</a></li>
+                        <li><a href="#founder">창업자</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>투자</h4>
+                    <ul>
+                        <li><a href="#architecture">Linkasia Ventures</a></li>
+                        <li><a href="#architecture">Velox Desk</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>연락처</h4>
+                    <ul>
+                        <li><a href="mailto:yhl@linkasia.world">yhl@linkasia.world</a></li>
+                        <li><a href="#contact">문의하기</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2025 LINKASIA WORLD LLC  All rights reserved</span>
+                <span>Proprietary Capital · New Jersey</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ═══════ SCROLL ANIMATIONS ═══════ -->
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+        // Mobile menu toggle
+        document.querySelector('.mobile-toggle')?.addEventListener('click', function() {
+            document.querySelector('.nav-center').classList.toggle('show');
+        });
+    </script>
+</body>
+</html>
