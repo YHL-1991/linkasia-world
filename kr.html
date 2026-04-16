@@ -406,9 +406,8 @@
         }
 
         .exec-diagram {
-            background: var(--navy);
-            border-radius: 12px;
-            padding: 44px 36px;
+            border-left: 2px solid var(--gold);
+            padding: 0 0 0 32px;
             color: var(--white);
         }
 
@@ -431,11 +430,12 @@
             display: flex;
             align-items: center;
             gap: 0;
-            padding: 16px 20px;
-            padding-left: 20px;
-            background: rgba(255,255,255,0.04);
+            padding: 10px 0;
+            padding-left: 0;
+            background: none;
             border-radius: 0;
-            border: 1px solid rgba(255,255,255,0.06);
+            border: none;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
         }
 
         .exec-flow-num {
@@ -1268,11 +1268,9 @@
                 <li><a href="#thesis">투자 철학</a></li>
                 <li><a href="#architecture">아키텍처</a></li>
                 <li><a href="#founder">창업자</a></li>
-                <li><a href="#contact">연락처</a></li>
             </ul>
             <div class="nav-right">
                 <a href="index.html" class="lang-switch">EN</a>
-                <a href="#contact" class="btn-contact-nav">문의하기</a>
             </div>
             <button class="mobile-toggle" onclick="document.querySelector('.nav-center').classList.toggle('show')">
                 <span></span><span></span><span></span>
@@ -1296,10 +1294,6 @@
                 <div class="hero-left">
                     <h1><em>확신을,</em><br>제약 없이</h1>
                     <p class="hero-desc">LINKASIA WORLD는 아시아와 미국 전역의 초기 스타트업 창업자에게 투자하는 자기자본 기반 투자 펌입니다. 확신 주도의 벤처 투자를 주 엔진으로, 내부 시스테매틱 전략을 통해 자본을 복리로 운용합니다</p>
-                    <a href="#contact" class="btn-primary">
-                        문의하기
-                        <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </a>
                 </div>
                 <div class="hero-stats">
                     <div class="stat-box">
@@ -1426,7 +1420,7 @@
         <div class="section-container">
             <div class="architecture-header">
                 <div class="section-eyebrow fade-up">FIRM ARCHITECTURE</div>
-                <h2 class="section-heading fade-up">세 개의 축, 하나의 대차대조표</h2>
+                <h2 class="section-heading fade-up">세 개의 축, 하나의 대차대조</h2>
                 <p class="section-intro fade-up">독립적인 세 축이 하나의 폐쇄형 자본 순환 구조 안에서 운영됩니다</p>
             </div>
             <div class="pillar-cards">
@@ -1457,7 +1451,7 @@
                         <div class="pillar-role">내부 재무</div>
                     </div>
                     <div class="pillar-card-body">
-                        <p>유동성 시장 전반에 걸쳐 자체 시스테매틱 전략을 운영합니다. 대차대조표 자본을 보존하고 복리로 늘려, Ventures가 인내심 있는 확신을 집행할 수 있도록 합니다</p>
+                        <p>유동성 시장 전반에 걸쳐 자체 시스테매틱 전략을 운영합니다. 대차대조 자본을 보존하고 복리로 늘려, Ventures가 인내심 있는 확신을 집행할 수 있도록 합니다</p>
                     </div>
                 </div>
             </div>
@@ -1502,34 +1496,6 @@
         </div>
     </div>
 
-    <!-- ═══════ CONTACT ═══════ -->
-    <section class="contact" id="contact">
-        <div class="section-container">
-            <div class="contact-header">
-                <div class="section-eyebrow fade-up">CONTACT</div>
-                <h2 class="section-heading fade-up">연락처</h2>
-                <p class="section-intro fade-up">함께 복리를 만들어 갑시다</p>
-            </div>
-            <div class="contact-grid fade-up">
-                <div class="contact-card">
-                    <div class="contact-label">이메일</div>
-                    <div class="contact-value"><a href="mailto:yhl@linkasia.world">yhl@linkasia.world</a></div>
-                    <div class="contact-sub">이영환 (Ethan Younghwan Lee)<br>Founder & Managing Principal</div>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-label">법인</div>
-                    <div class="contact-value">LINKASIA WORLD LLC</div>
-                    <div class="contact-sub">미국 뉴저지주<br>단일 구성원 LLC</div>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-label">운영 거점</div>
-                    <div class="contact-value">서울, 뉴저지</div>
-                    <div class="contact-sub">Asia–US Corridor</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- ═══════ FOOTER ═══════ -->
     <footer class="footer">
         <div class="section-container">
@@ -1555,13 +1521,6 @@
                     <ul>
                         <li><a href="#architecture">Linkasia Ventures</a></li>
                         <li><a href="#architecture">Velox Desk</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>연락처</h4>
-                    <ul>
-                        <li><a href="mailto:yhl@linkasia.world">yhl@linkasia.world</a></li>
-                        <li><a href="#contact">문의하기</a></li>
                     </ul>
                 </div>
             </div>

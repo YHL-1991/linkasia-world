@@ -406,9 +406,8 @@
         }
 
         .exec-diagram {
-            background: var(--navy);
-            border-radius: 12px;
-            padding: 44px 36px;
+            border-left: 2px solid var(--gold);
+            padding: 0 0 0 32px;
             color: var(--white);
         }
 
@@ -431,10 +430,12 @@
             display: flex;
             align-items: center;
             gap: 0;
-            padding: 16px 20px;
-            background: rgba(255,255,255,0.04);
+            padding: 10px 0;
+            padding-left: 0;
+            background: none;
             border-radius: 0;
-            border: 1px solid rgba(255,255,255,0.06);
+            border: none;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
         }
 
         .exec-flow-num {
@@ -1259,11 +1260,9 @@
                 <li><a href="#thesis">Thesis</a></li>
                 <li><a href="#architecture">Architecture</a></li>
                 <li><a href="#founder">Founder</a></li>
-                <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="nav-right">
                 <a href="kr.html" class="lang-switch">KR</a>
-                <a href="#contact" class="btn-contact-nav">Get in Touch</a>
             </div>
             <button class="mobile-toggle" onclick="document.querySelector('.nav-center').classList.toggle('show')">
                 <span></span><span></span><span></span>
@@ -1287,10 +1286,6 @@
                 <div class="hero-left">
                     <h1><em>Conviction,</em><br>unconstrained</h1>
                     <p class="hero-desc">LINKASIA WORLD is a proprietary capital firm investing in early-stage founders across Asia and the US. Our primary engine is conviction-driven venture investment, compounded through internal systematic strategies</p>
-                    <a href="#contact" class="btn-primary">
-                        Get in Touch
-                        <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </a>
                 </div>
                 <div class="hero-stats">
                     <div class="stat-box">
@@ -1493,34 +1488,6 @@
         </div>
     </div>
 
-    <!-- ═══════ CONTACT ═══════ -->
-    <section class="contact" id="contact">
-        <div class="section-container">
-            <div class="contact-header">
-                <div class="section-eyebrow fade-up">CONTACT</div>
-                <h2 class="section-heading fade-up">Get in Touch</h2>
-                <p class="section-intro fade-up">Let's compound together</p>
-            </div>
-            <div class="contact-grid fade-up">
-                <div class="contact-card">
-                    <div class="contact-label">Email</div>
-                    <div class="contact-value"><a href="mailto:yhl@linkasia.world">yhl@linkasia.world</a></div>
-                    <div class="contact-sub">Ethan Younghwan Lee<br>Founder & Managing Principal</div>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-label">Entity</div>
-                    <div class="contact-value">LINKASIA WORLD LLC</div>
-                    <div class="contact-sub">State of New Jersey<br>Single-member LLC</div>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-label">Operating Cities</div>
-                    <div class="contact-value">New Jersey · Seoul</div>
-                    <div class="contact-sub">Asia–US Corridor</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- ═══════ FOOTER ═══════ -->
     <footer class="footer">
         <div class="section-container">
@@ -1546,13 +1513,6 @@
                     <ul>
                         <li><a href="#architecture">Linkasia Ventures</a></li>
                         <li><a href="#architecture">Velox Desk</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Contact</h4>
-                    <ul>
-                        <li><a href="mailto:yhl@linkasia.world">yhl@linkasia.world</a></li>
-                        <li><a href="#contact">Get in Touch</a></li>
                     </ul>
                 </div>
             </div>
