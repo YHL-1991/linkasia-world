@@ -433,7 +433,7 @@
             gap: 0;
             padding: 16px 20px;
             background: rgba(255,255,255,0.04);
-            border-radius: 6px;
+            border-radius: 0;
             border: 1px solid rgba(255,255,255,0.06);
         }
 
@@ -468,13 +468,14 @@
 
         .opp-card {
             background: var(--warm-gray);
-            border-radius: 12px;
+            border-radius: 0;
             padding: 40px 32px;
-            border: 1px solid var(--border);
+            border: none;
+            border-top: 2px solid var(--gold);
             transition: transform 0.2s;
         }
 
-        .opp-card:hover { transform: translateY(-4px); }
+        .opp-card:hover { transform: none; }
 
         .opp-num {
             font-family: var(--font-serif);
@@ -533,8 +534,9 @@
 
         .thesis-card {
             background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.07);
-            border-radius: 10px;
+            border: none;
+            border-left: 2px solid var(--gold);
+            border-radius: 0;
             padding: 36px 28px;
         }
 
@@ -569,15 +571,15 @@
 
         .pillar-card {
             background: var(--white);
-            border-radius: 12px;
+            border-radius: 0;
             overflow: hidden;
-            border: 1px solid var(--border);
+            border: 1px solid rgba(0,0,0,0.06);
             transition: transform 0.2s, box-shadow 0.2s;
         }
 
         .pillar-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 40px rgba(14,17,22,0.08);
+            transform: none;
+            box-shadow: none;
         }
 
         .pillar-card-header {
@@ -801,8 +803,9 @@
 
         .geo-card {
             background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.07);
-            border-radius: 12px;
+            border: none;
+            border-left: 2px solid var(--gold);
+            border-radius: 0;
             padding: 44px 36px;
         }
 
@@ -854,7 +857,7 @@
 
         .founder-avatar {
             background: var(--navy);
-            border-radius: 12px;
+            border-radius: 0;
             padding: 48px 32px;
             text-align: center;
         }
@@ -1043,8 +1046,9 @@
 
         .contact-card {
             background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.07);
-            border-radius: 10px;
+            border: none;
+            border-top: 2px solid var(--gold);
+            border-radius: 0;
             padding: 32px 28px;
         }
 
